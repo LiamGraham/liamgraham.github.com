@@ -1,5 +1,7 @@
 from flask import render_template
+
 from app import app, pages
+
 
 @app.route('/')
 def home():
@@ -9,9 +11,10 @@ def home():
         key=lambda page: page.meta['date'])
     return render_template('index.html', pages=sorted_posts)
 
+
 @app.route('/<path:path>/')
 def page(path):
-    # `path` is the filename of a page, without the file extension
+    # Path is the filename of a page, without the file extension
     # e.g. "first-post"
     page = pages.get_or_404(path)
-return render_template('page.html', page=page)
+    return render_template('page.html', page=page)
