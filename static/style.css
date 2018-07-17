@@ -3,7 +3,17 @@
 html {
     font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
-    padding: 2rem 15rem 0rem 15rem;
+    padding: 2rem 20rem 0rem 20rem;
+}
+::selection {
+    text-decoration: none;
+    color:white;
+    background: black;
+}
+::-moz-selection {
+    text-decoration: none;
+    color:white;
+    background: black;
 }
 h1, h2, h3, h4, h5 {
     font-family: 'Patua One', 'Times New Roman', Times, serif;
@@ -30,11 +40,6 @@ a:hover {
     background: black;
 }
 a:focus {
-    text-decoration: none;
-    color:white;
-    background: black;
-}
-a:hover, a:active {
     text-decoration: none;
     color:white;
     background: black;
