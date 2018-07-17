@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One|Open-Sans');
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    padding: 2rem 15rem 0rem 15rem;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Patua One', 'Times New Roman', Times, serif;
+}
+h1 {
+    font-size: 25pt;
+}
+h2 {
+    font-size: 17pt;
+}
+.no-bullet {
+    padding-left: 0;
+    list-style-type: none;
+}
+ul {
+    padding-left: 2em;
+}
+a:visited { 
+    text-decoration: none; color:black;
+}
+a:hover {
+    text-decoration: none;
+    color:white;
+    background: black;
+}
+a:focus {
+    text-decoration: none;
+    color:white;
+    background: black;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color:white;
+    background: black;
+}
