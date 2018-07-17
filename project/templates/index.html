@@ -1,1 +1,28 @@
 {% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Liam Graham{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Liam is a Bachelor of Engineering (Honours) student at the University of
+        Queensland, majoring in Software Engineering.
+    </p>
+    <ul class="no-bullet">
+        <li><a href="https://github.com/LiamGraham">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/liam-graham/">LinkedIn</a></li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="https://github.com/LiamGraham/verdite">Verdite</a> - A git-powered
+        automatic version control tool for everday use</li>
+        <li><a href="https://github.com/LiamGraham/truthtable">truthtable</a> - Tool to
+        create truth tables for boolean expressions</li>
+        <li><a href="https://github.com/LiamGraham/graph-gui">GraphGUI</a> - Specialised
+        drawing program allowing the creation of undirected graphs</li>
+    </ul>
+
+    <h2>Blog</h2>
+{% endblock %}
