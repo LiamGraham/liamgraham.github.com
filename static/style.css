@@ -3,7 +3,7 @@
 html {
     font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
-    padding: 2rem 20rem 0rem 20rem;
+    padding: 2em 20em 0em 20em;
 }
 ::selection {
     text-decoration: none;
