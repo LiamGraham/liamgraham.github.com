@@ -1,3 +1,3 @@
 ## liamgraham.github.io
 
-Personal website
+[Personal website](https://liamgraham.github.io/)
