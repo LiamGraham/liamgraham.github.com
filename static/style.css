@@ -72,3 +72,7 @@ a:focus {
     color:white;
     background: black;
 }
+.date {
+    color: rgb(31, 31, 31);
+    font-size: 10pt;
+}
