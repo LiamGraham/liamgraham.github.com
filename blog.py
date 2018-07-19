@@ -36,17 +36,18 @@ def write_post_static(text_name):
     title, content = format_content(text)
 
     static = static.replace("{ POST_TITLE }", title)
-    static = static.replace("{ POST_DATE }", "-".join(date))
+    static = static.replace("{ POST_DATE }", "/".join(date))
     static = static.replace("{ POST_CONTENT }", content)
 
     date_path = "\\".join(date)
     post_dir = f"{BLOG_DIR}\\{date_path}"
+    file_dir = f"{post_dir}\\{file_name}"
     if not path.exists(post_dir):
         makedirs(post_dir)
 
-    with open(f"{post_dir}\\{file_name}", "w") as f:
+    with open(file_dir, "w") as f:
         f.write(static)
-    return BlogPost(title, date, content, post_dir)
+    return BlogPost(title, "/".join(date), content, file_dir)
 
 
 def format_content(text):
@@ -99,7 +100,7 @@ def get_post_content(text_name):
     
     Returns (str): content of target blog post text
     """
-    with open(f"{TEXT_DIR}\\{post_name}", "r") as f:
+    with open(f"{TEXT_DIR}\\{text_name}", "r") as f:
         return f.read()
 
 
@@ -116,6 +117,15 @@ def get_template(name):
         return f.read()
 
 
+def clear_blog_directory():
+    dirs = listdir(BLOG_DIR)
+    exclude = [TEXT_DIR.split("\\")[-1]]
+    for x in dirs:
+        if x in exclude:
+            continue
+        rmtree(f"{BLOG_DIR}\\{x}")
+
+
 @dataclass
 class BlogPost:
     """
@@ -128,6 +138,7 @@ class BlogPost:
 
 
 if __name__ == "__main__":
+    clear_blog_directory()
     post_names = get_text_names()
     posts = []
     for name in post_names:
