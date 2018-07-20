@@ -77,8 +77,11 @@ def format_content(text):
 
 def write_blog_static(posts):
     """
+    Creates a static HTML file for the 'Blog' page from which blog posts can be
+    accessed.
 
-
+    Arguments:
+        posts (list(BlogPost)): all blog posts to be included in page   
     """
     static = get_template("blog")
     post_list = ""
