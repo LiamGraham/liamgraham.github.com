@@ -79,15 +79,20 @@ def write_blog_static(posts):
     """
     Creates a static HTML file for the 'Blog' page from which blog posts can be
     accessed.
-
+    
     Arguments:
         posts (list(BlogPost)): all blog posts to be included in page   
     """
     static = get_template("blog")
     post_list = ""
+    # Reverse posts to descending date order (most to least recent)
+    posts.reverse()
 
+    if not posts:
+        post_list = "<li>No posts</li>"
     for x in posts:
         post_list += f"<li><a href='{x.directory}'>{x.date} - {x.title}</a></li>\n"
+
     static = static.replace("{ POST_LIST }", post_list)
 
     with open("blog.html", "w") as f:
@@ -134,6 +139,7 @@ class BlogPost:
     """
     Data class storing all blog post data.
     """
+
     title: str
     date: str
     content: str
