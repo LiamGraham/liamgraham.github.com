@@ -1,12 +1,12 @@
 from os import listdir, path, makedirs
 from shutil import rmtree
 from dataclasses import dataclass
+import static
+
 
 # Paths for blog, blog post text, and template directories.
 BLOG_DIR = "blog"
 TEXT_DIR = "blog\\_text"
-TEMPLATE_DIR = "templates"
-
 
 def get_text_names():
     """
@@ -28,16 +28,16 @@ def write_post_static(text_name):
     Returns (BlogPost): blog post object
     """
     text = get_post_content(text_name)
-    static = get_template("post")
+    post = static.get_template("post")
 
     full_name = path.splitext(text_name)[0].split("-")
     date = full_name[0:3]
     file_name = f"{'-'.join(full_name[3:])}.html"
     title, content = format_content(text)
 
-    static = static.replace("{ POST_TITLE }", title)
-    static = static.replace("{ POST_DATE }", "/".join(date))
-    static = static.replace("{ POST_CONTENT }", content)
+    post = post.replace("{ POST_TITLE }", title)
+    post = post.replace("{ POST_DATE }", "/".join(date))
+    post = post.replace("{ POST_CONTENT }", content)
 
     date_path = "\\".join(date)
     post_dir = f"{BLOG_DIR}\\{date_path}"
@@ -46,7 +46,7 @@ def write_post_static(text_name):
         makedirs(post_dir)
 
     with open(file_dir, "w") as f:
-        f.write(static)
+        f.write(post)
     return BlogPost(title, "/".join(date), content, file_dir)
 
 
@@ -83,7 +83,7 @@ def write_blog_static(posts):
     Arguments:
         posts (list(BlogPost)): all blog posts to be included in page   
     """
-    static = get_template("blog")
+    blog = static.get_template("blog")
     post_list = ""
     # Reverse posts to descending date order (most to least recent)
     posts.reverse()
@@ -93,10 +93,10 @@ def write_blog_static(posts):
     for x in posts:
         post_list += f"<li><a href='{x.directory}'>{x.date} - {x.title}</a></li>\n"
 
-    static = static.replace("{ POST_LIST }", post_list)
+    blog = blog.replace("{ POST_LIST }", post_list)
 
     with open("blog.html", "w") as f:
-        f.write(static)
+        f.write(blog)
 
 
 def get_post_content(text_name):
@@ -109,19 +109,6 @@ def get_post_content(text_name):
     Returns (str): content of target blog post text
     """
     with open(f"{TEXT_DIR}\\{text_name}", "r") as f:
-        return f.read()
-
-
-def get_template(name):
-    """
-    Returns the text of the HTML template having the given name.
-
-    Arguments:
-        name (str): name of template, excluding the file extension
-
-    Returns (str): text of HTML template
-    """
-    with open(f"{TEMPLATE_DIR}\\{name}.html", "r") as f:
         return f.read()
 
 
