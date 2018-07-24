@@ -76,7 +76,6 @@ a:focus {
     color: rgb(31, 31, 31);
     font-size: 10pt;
 }
-/* Style the tab */
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -88,9 +87,9 @@ a:focus {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 10px 12px;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 12px;
 }
 .tab button:hover {
     background-color: #ddd;
@@ -108,18 +107,19 @@ table {
     border-collapse: collapse;
     border: 2px solid rgb(200,200,200);
     letter-spacing: 1px;
-    font-size: 0.4rem;
+    width: 100%;
 }
 td, th {
     border: 1px solid rgb(190,190,190);
     padding: 10px 20px;
-}
-td {
     text-align: center;
 }
 .available {
-    background: green;
+    background: rgb(28, 194, 28);
 }
 .unavailable {
-    background: grey;
+    background: rgb(250, 48, 48);
+}
+.empty {
+    background: rgb(190,190,190);
 }
