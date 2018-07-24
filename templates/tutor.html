@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="static/style.css">
+
+<head>
+  <title>Liam Graham | Tutoring</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1><a href="index.html">Liam Graham</a></h1>
+        
+        <h2>Tutoring</h2>
+
+        <div class="tab">
+            { TAB_LINKS }
+        </div>
+
+        { TAB_CONTENT }
+        
+        <script>
+        function openTab(evt, weekNum) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(weekNum).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+</body>
+
+</html>
