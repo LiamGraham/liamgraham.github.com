@@ -45,14 +45,14 @@ def create_tabs(num_weeks):
 
 def create_availability_table(week):
     """
-
+    Create availability table for the given week.
 
     Arguments:
         week (str): name of week
     """
     table = """<table>
     <tr>
-        <td>&nbsp;</td>
+        <td class="empty"></td>
         <th>Mon</th>
         <th>Tue</th>
         <th>Wed</th>
