@@ -20,16 +20,16 @@ def create_tabs(num_weeks):
     Returns (str): HTML page contents
     """
     tab_names = []
-    page = static.get_template("tutor")
+    page = static.get_template("tutoring")
     tabs = ""
     for i in range(0, num_weeks):
         week = f"Week {i + 1}"
         table = create_availability_table(week)
-        tabs += f"""<div id="{week}" class="tabcontent">
+        tabs += f"""<div id="{i + 1}" class="tabcontent">
         {table}
         </div>\n
         """
-        tab_names.append(week)
+        tab_names.append(i + 1)
     page = page.replace("{ TAB_CONTENT }", tabs)
 
     tab_links = ""
@@ -74,5 +74,5 @@ def create_availability_table(week):
 
 if __name__ == "__main__":
     page = create_tabs(WEEKS)
-    with open("tutor.html", "w") as f:
+    with open("tutoring", "w") as f:
         f.write(page)
