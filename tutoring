@@ -12,24 +12,26 @@
         
         <h2>Tutoring</h2>
 
+        <h3>Weekly Availability</h3>
+
         <div class="tab">
-            <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Week 1')">Week 1</button>
-<button class="tablinks" onclick="openTab(event, 'Week 2')">Week 2</button>
-<button class="tablinks" onclick="openTab(event, 'Week 3')">Week 3</button>
-<button class="tablinks" onclick="openTab(event, 'Week 4')">Week 4</button>
-<button class="tablinks" onclick="openTab(event, 'Week 5')">Week 5</button>
-<button class="tablinks" onclick="openTab(event, 'Week 6')">Week 6</button>
-<button class="tablinks" onclick="openTab(event, 'Week 7')">Week 7</button>
-<button class="tablinks" onclick="openTab(event, 'Week 8')">Week 8</button>
-<button class="tablinks" onclick="openTab(event, 'Week 9')">Week 9</button>
-<button class="tablinks" onclick="openTab(event, 'Week 10')">Week 10</button>
-<button class="tablinks" onclick="openTab(event, 'Week 11')">Week 11</button>
-<button class="tablinks" onclick="openTab(event, 'Week 12')">Week 12</button>
-<button class="tablinks" onclick="openTab(event, 'Week 13')">Week 13</button>
+            <button class="tablinks" id="defaultOpen" onclick="openTab(event, '1')">1</button>
+<button class="tablinks" onclick="openTab(event, '2')">2</button>
+<button class="tablinks" onclick="openTab(event, '3')">3</button>
+<button class="tablinks" onclick="openTab(event, '4')">4</button>
+<button class="tablinks" onclick="openTab(event, '5')">5</button>
+<button class="tablinks" onclick="openTab(event, '6')">6</button>
+<button class="tablinks" onclick="openTab(event, '7')">7</button>
+<button class="tablinks" onclick="openTab(event, '8')">8</button>
+<button class="tablinks" onclick="openTab(event, '9')">9</button>
+<button class="tablinks" onclick="openTab(event, '10')">10</button>
+<button class="tablinks" onclick="openTab(event, '11')">11</button>
+<button class="tablinks" onclick="openTab(event, '12')">12</button>
+<button class="tablinks" onclick="openTab(event, '13')">13</button>
 
         </div>
 
-        <div id="Week 1" class="tabcontent">
+        <div id="1" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -123,7 +125,7 @@
 </table>
         </div>
 
-        <div id="Week 2" class="tabcontent">
+        <div id="2" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -217,7 +219,7 @@
 </table>
         </div>
 
-        <div id="Week 3" class="tabcontent">
+        <div id="3" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -311,7 +313,7 @@
 </table>
         </div>
 
-        <div id="Week 4" class="tabcontent">
+        <div id="4" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -405,7 +407,7 @@
 </table>
         </div>
 
-        <div id="Week 5" class="tabcontent">
+        <div id="5" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -499,7 +501,7 @@
 </table>
         </div>
 
-        <div id="Week 6" class="tabcontent">
+        <div id="6" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -593,7 +595,7 @@
 </table>
         </div>
 
-        <div id="Week 7" class="tabcontent">
+        <div id="7" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -687,7 +689,7 @@
 </table>
         </div>
 
-        <div id="Week 8" class="tabcontent">
+        <div id="8" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -781,7 +783,7 @@
 </table>
         </div>
 
-        <div id="Week 9" class="tabcontent">
+        <div id="9" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -875,7 +877,7 @@
 </table>
         </div>
 
-        <div id="Week 10" class="tabcontent">
+        <div id="10" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -969,7 +971,7 @@
 </table>
         </div>
 
-        <div id="Week 11" class="tabcontent">
+        <div id="11" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -1063,7 +1065,7 @@
 </table>
         </div>
 
-        <div id="Week 12" class="tabcontent">
+        <div id="12" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
@@ -1157,7 +1159,7 @@
 </table>
         </div>
 
-        <div id="Week 13" class="tabcontent">
+        <div id="13" class="tabcontent">
         <table>
     <tr>
         <td class="empty"></td>
