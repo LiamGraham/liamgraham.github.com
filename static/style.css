@@ -88,8 +88,9 @@ a:focus {
     outline: none;
     cursor: pointer;
     padding: 10px 12px;
+    width: 7.69%;
     transition: 0.3s;
-    font-size: 12px;
+    font-size: 10pt;
 }
 .tab button:hover {
     background-color: #ddd;
@@ -108,17 +109,20 @@ table {
     border: 2px solid rgb(200,200,200);
     letter-spacing: 1px;
     width: 100%;
+    table-layout: fixed;
 }
 td, th {
     border: 1px solid rgb(190,190,190);
-    padding: 10px 20px;
+    padding: 8px;
     text-align: center;
+    font-size: 10pt;
+    font-weight: normal;
 }
 .available {
     background: rgb(28, 194, 28);
 }
 .unavailable {
-    background: rgb(250, 48, 48);
+    background: grey;
 }
 .empty {
     background: rgb(190,190,190);
