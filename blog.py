@@ -2,11 +2,13 @@ from os import listdir, path, makedirs
 from shutil import rmtree
 from dataclasses import dataclass
 import static
-
+import markdown
+import re
 
 # Paths for blog, blog post text, and template directories.
 BLOG_DIR = "blog"
 TEXT_DIR = "blog\\_text"
+
 
 def get_text_names():
     """
@@ -35,8 +37,9 @@ def write_post_static(text_name):
     file_name = f"{'-'.join(full_name[3:])}.html"
     title, content = format_content(text)
 
-    post = post.replace("{ POST_TITLE }", title)
-    post = post.replace("{ POST_DATE }", "/".join(date))
+    content = content.replace(
+        "{ POST_DATE }", f'<div class="date">{"/".join(date)}</div>'
+    )
     post = post.replace("{ POST_CONTENT }", content)
 
     date_path = "\\".join(date)
@@ -52,26 +55,15 @@ def write_post_static(text_name):
 
 def format_content(text):
     """
-    Returns the given text formatted for display on a webpage. Paragraph tags are
-    inserted so that paragraph breaks are retained. 
+    Returns the given markdown text formatted for display on a webpage (i.e. as HTMl).
 
     Arguments:
         text (str): text to be formatted
 
     Returns (str): formatted text
     """
-    content = ""
-    paragraph = ""
-    title = ""
-    lines = text.split("\n")
-    title = lines.pop(0)
-    for x in lines:
-        line = x.strip()
-        if line:
-            paragraph += line
-        else:
-            content += f"<p>{paragraph}</p>"
-            paragraph = ""
+    content = markdown.markdown(text)
+    title = re.sub("<.+?>", "", content.split("\n")[0])
     return title, content
 
 
