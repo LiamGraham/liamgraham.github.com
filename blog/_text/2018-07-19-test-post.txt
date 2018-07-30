@@ -1,2 +1,5 @@
-Test Post
+## Test Post
+
+{ POST_DATE }
+
 Test post, please ignore.
