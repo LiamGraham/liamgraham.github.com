@@ -2,12 +2,12 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 12pt;
+    font-size: 11pt;
     text-align: justify;
 }
 .main {
-    max-width:700px;
-    margin:50px auto 50px;
+    max-width: 40%;
+    margin: 50px auto 50px;
 }
 .image {
     width: 100%;
