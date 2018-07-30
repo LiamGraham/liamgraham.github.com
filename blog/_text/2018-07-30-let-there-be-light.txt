@@ -12,9 +12,9 @@ Twitter account. As the blog is unlikely to become fodder for any '30 Blogs Ever
 Software Developer Should Be Reading' article, I'm just going to use it as repository for my
 thoughts and reflections on my journey (?) as a software engineer, without to attempting
 to build or appeal to an audience. I think there's a genuine value to this kind of
-introspection, as it demands that you contemplate your actions and decisions in a manner
-that you might not necessarily engage in as you are making them. The blog will also
-become, in aggregate, a document of my progress and pitfalls and growth and
+introspection, as it demands the active contemplation of decisions and actions in a
+manner that one might not necessarily engage in 'in the moment', if ever. The blog will
+also become, in aggregate, a document of my progress and pitfalls and growth and
 explorations, if I do end up posting with any kind of regularity.
 
 ### Developing the Website
