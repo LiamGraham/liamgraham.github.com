@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../../../../static/style.css">
+
+<head>
+  <title>Liam Graham | Blog</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1><a href="../../../../index.html">Liam Graham</a></h1>
+
+        <h2>'Let There Be Light', and other cliches</h2>
+<p><div class="date">2018/07/30</div></p>
+<p>So the web-based home of all things Liam Graham has arrived (hold the fanfare). There's
+never been a more awaited event in blogging, etc. etc.</p>
+<p>I don't have any grand plans for this site or blog, nor did I create them as a monument
+to my web development capabilities (web dev is neither a strength nor an interest of
+mine at this stage). The website will serve a as public-facing profile, in lieu of a
+Twitter account. As the blog is unlikely to become fodder for any '30 Blogs Every
+Software Developer Should Be Reading' article, I'm just going to use it as repository for my
+thoughts and reflections on my journey (?) as a software engineer, without spending any
+time appealing to an audience. I think there's a genuine value to this kind of
+introspection, as it demands that you contemplate your actions and decisions in a manner
+that you might not necessarily engage in as you are making them. The blog will also
+become, in aggregate, a document of my progress and pitfalls and growth and
+explorations, if I do end up posting with any kind of regularity.</p>
+<h3>Developing the Website</h3>
+<p>After unsuccessfully tinkering with Frozen-Flask and briefly contemplating installing Jekyll on
+Windows, I decided to instead write some simple Python scripts that would generate the static blog
+content from markdown files, with the rest of the site being plain, handwritten HTML.
+Specifically, the Python would take all the .md files, convert them to HTML using the
+'markdown' module and place the resulting files in directories corresponding to the post
+dates (to imitate the standard blog/<year>/<month>/<day>/<post-name> format for blogs),
+as well as creating links to each of them in blog.html. This enabled me still to write and
+format the posts using markdown without having to work with a framework or static site
+generator (albeit in a way not nearly as clean) or write the HTML for the posts by hand. </p>
+<p>I'm forever afraid that my approach entirely contravenes the best practice
+for whatever it is I'm attempting, or that there's some wonderous, pure implementation
+that's evaded me, particularly if it's a domain I'm unfamiliar with. But, feelings of
+dread aside, the website works, and, against all odds, is currently the highest ranked
+GitHub Pages-hosted site about software undergrads called Liam Graham. There's always
+somethin' to be thankful for.</p>
+    </div>
+</body>
+
+</html>
