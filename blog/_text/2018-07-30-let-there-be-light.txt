@@ -25,7 +25,7 @@ content from markdown files, with the rest of the site being plain, handwritten 
 Specifically, the Python would take all the .md files, convert them to HTML using the
 'markdown' module and place the resulting files in directories corresponding to the post
 dates (to imitate the standard '.../blog/<year\>/<month\>/<day\>/<post-name\>' format for blogs),
-as well as creating links to each of them in blog.html. This enabled me still to write and
+as well as creating links to each of them in blog.html. This enabled me to still write and
 format the posts using markdown without having to work with a framework or static site
 generator (albeit in a way not nearly as clean) or write the HTML for the posts by hand. 
 
