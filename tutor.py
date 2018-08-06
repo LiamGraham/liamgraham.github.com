@@ -5,7 +5,7 @@ WEEKS = 13
 HOURS = 10
 DAYS = 5
 START_HOUR = 9
-AVAIL_PATH = "C:\\Users\\Liam\\Google Drive\\Personal\\Employment\\Tutoring\\Tutoring Availability.xlsx"
+AVAIL_PATH = "C:\\Users\\liamd\\Google Drive\\Personal\\Employment\\Tutoring\\Tutoring Availability.xlsx"
 
 ROW_OFFSET = 2
 COLUMN_OFFSET = 2
