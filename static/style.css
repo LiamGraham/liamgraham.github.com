@@ -119,10 +119,10 @@ td, th {
     font-weight: normal;
 }
 .available {
-    background: rgb(28, 194, 28);
+    background: rgb(198, 239, 206);
 }
 .unavailable {
-    background: grey;
+    background: rgb(175, 175, 175);
 }
 .empty {
     background: rgb(190,190,190);
