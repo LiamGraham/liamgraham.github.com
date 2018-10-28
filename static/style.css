@@ -45,18 +45,23 @@ body {
     box-shadow: -5px 10px 50px -22px rgba(0,0,0,0.3);
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-weight: bold;
-    font-size: 40pt;
     font-family: AvenirBold, Roboto;
     text-align: center;
     margin: 0;
+}
+
+h1 {
+    font-size: 40pt;
 }
 
 p {
     font-family: AvenirLight;
     font-size: 10pt;
     align-self: center;
+    width: 40%;
+    text-align: justify;
 }
 
 hr {
@@ -64,21 +69,19 @@ hr {
     height: 0.5px;
     border: 0;
     border-top: 1px solid rgb(223, 223, 223);
-    margin: 0.5em 1em;
+    margin: 1em 1em;
     padding: 0;
 }
 
-.profile {
+.rounded {
     align-self: center;
-
-    width: 200px;
-    height: 200px;
-    margin: 1.5em;
+    width: 150px;
+    height: 150px;
+    margin: 1.25em;
 }
 
-.text {
-    width: 50%;
-    text-align: center;
+.list {
+    align-self: center;
 }
 
 nav {
