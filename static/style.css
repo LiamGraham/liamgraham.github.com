@@ -47,22 +47,12 @@ body {
     box-shadow: -5px 10px 50px -22px rgba(0,0,0,0.3);
 }
 
-.front {
-    display: flex;
-    flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
 .name {
     font-weight: bold;
     font-family: AvenirBold, Roboto;
-    font-size: 400%;
+    font-size: 42pt;
     text-align: center;
-    margin-top: 0.3em;
+    margin: 0.3em 0 0 0;
 }
 
 h1, h2, h3, h4 {
@@ -78,12 +68,11 @@ h1 {
 
 p {
     font-family: AvenirLight;
-    font-size: 100%;
+    font-size: 11pt;
+    align-self: center;
     width: 40%;
     text-align: justify;
     margin: 5px 0 5px 0;
-    align-self: center;
-
 }
 
 hr {
@@ -96,9 +85,9 @@ hr {
 }
 
 .rounded {
-    width: 15%;
-    margin: 1.5em 0 1em 0;
     align-self: center;
+    width: 175px;
+    margin: 1.5em 0 1em 0;
 }
 
 .list {
@@ -107,7 +96,6 @@ hr {
 
 nav {
     align-self: center;
-    font-size: 110%;
 }
 
 nav ul {
