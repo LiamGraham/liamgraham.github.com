@@ -10,6 +10,10 @@
     src: url("../assets/fonts/AvenirLTStd-Light.otf");
 }
 
+:root {
+    --box-bg-colour: #fcfcfc;
+}
+
 body {
     font-family: AvenirLight, 'Open Sans', sans-serif;
     font-size: 11pt;
@@ -34,7 +38,7 @@ body {
     -webkit-flex-direction: column;
 
     border-radius: 5px;
-    background: #fcfcfc;
+    background: var(--box-bg-colour);
     width: 75%;
     height: 85%;
     overflow: auto;
@@ -113,12 +117,12 @@ nav ul li a {
 
 ::selection {
     text-decoration: none;
-    color:white;
+    color: var(--box-bg-colour);
     background: rgb(46, 49, 145);
 }
 ::-moz-selection {
     text-decoration: none;
-    color:white;
+    color: var(--box-bg-colour);
     background: rgb(46, 49, 145);
 }
 
@@ -134,13 +138,13 @@ a:visited {
 a:focus {
     text-decoration: none;
     color:rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
+    background: var(--box-bg-colour);
 }
 
 a:hover {
     text-decoration: none;
     color: rgb(46, 49, 145);
-    background: white;
+    background: var(--box-bg-colour);
 }
 
 .no-bullet {
