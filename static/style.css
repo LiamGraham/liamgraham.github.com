@@ -1,29 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Patua+One|Open-Sans');
-
-@font-face {
-    font-family: AvenirBold;
-    src: url("../assets/fonts/AvenirLTStd-Heavy.otf");
-}
-
-@font-face {
-    font-family: AvenirLight;
-    src: url("../assets/fonts/AvenirLTStd-Light.otf");
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito|Open-Sans');
 
 :root {
-    --box-bg-colour: #fcfcfc;
+    --floating-container-bg-colour: #fcfcfc;
 }
 
 body {
-    font-family: AvenirLight, 'Open Sans', sans-serif;
-    font-size: 11pt;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
     text-align: justify;
     background-image: url("../assets/images/background.png");
     height: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  html {
+    font-size: 20px;
+  }
+}
 
 
 main {
@@ -32,20 +33,7 @@ main {
     height: 100%;
 }
 
-#blurb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-}
-
-#blurb > * {
-    flex: 1 1 auto;
-}
-
-.box {
+.floating-container {
     display: flex;
     flex-direction: column;
     -webkit-box-orient: vertical;
@@ -53,11 +41,11 @@ main {
     -webkit-flex-direction: column;
 
     border-radius: 5px;
-    background: var(--box-bg-colour);
+    background: var(--floating-container-bg-colour);
     width: 75%;
-    height: 85%;
-    overflow: auto;
-    position:absolute;
+    min-height: 85%;
+    flex: 1;
+    position: absolute;
     top: 50px;
     padding: 10px;
     
@@ -66,32 +54,31 @@ main {
     box-shadow: -5px 10px 50px -22px rgba(0,0,0,0.3);
 }
 
+.blurb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.blurb > * {
+    margin: 0;
+}
+
 .name {
     font-weight: bold;
-    font-family: AvenirBold, Roboto;
-    font-size: 42pt;
+    font-size: 4.5em;
     text-align: center;
-    margin: 0.3em 0 0 0;
 }
 
-h1, h2, h3, h4 {
-    font-weight: bold;
-    font-family: AvenirBold, Roboto;
-    text-align: center;
-    margin: 5px;
-}
-
-h1 {
-    font-size: 30pt;
-}
-
-p {
-    font-family: AvenirLight;
-    font-size: 11pt;
+.bio-text {
+    font-size: 1.25em;
     align-self: center;
-    width: 40%;
+    width: 50%;
     text-align: justify;
-    margin: 5px 0 5px 0;
 }
 
 hr {
@@ -103,10 +90,10 @@ hr {
     padding: 0;
 }
 
-.rounded {
+.portrait {
     align-self: center;
-    width: 225px;
-    margin: 1.5em 0 0.75em 0;
+    width: 300px;
+    object-fit: scale-down;
 }
 
 .list {
@@ -119,11 +106,11 @@ nav {
 
 nav ul {
     display: flex;
+    flex-direction: row;
 }
 
 nav ul li {
-    margin-right: 3%;
-    padding: 0px 15px 0px 15px;
+    margin: 0 1em;
 }
 
 nav ul li a {
@@ -132,12 +119,12 @@ nav ul li a {
 
 ::selection {
     text-decoration: none;
-    color: var(--box-bg-colour);
+    color: var(--floating-container-bg-colour);
     background: rgb(46, 49, 145);
 }
 ::-moz-selection {
     text-decoration: none;
-    color: var(--box-bg-colour);
+    color: var(--floating-container-bg-colour);
     background: rgb(46, 49, 145);
 }
 
@@ -153,13 +140,13 @@ a:visited {
 a:focus {
     text-decoration: none;
     color:rgb(0, 0, 0);
-    background: var(--box-bg-colour);
+    background: var(--floating-container-bg-colour);
 }
 
 a:hover {
     text-decoration: none;
     color: rgb(46, 49, 145);
-    background: var(--box-bg-colour);
+    background: var(--floating-container-bg-colour);
 }
 
 .no-bullet {
@@ -168,17 +155,12 @@ a:hover {
 }
 
 .menu {
-    font-size: 12pt;
+    font-size: 1.25em;
 }
 
 .squiggle {
-    width: 200px;
+    max-width: 300px;
+    object-fit: scale-down;
     margin: 1em;
-    align-self: center;
-}
-
-.date {
-    color: rgb(31, 31, 31);
-    font-size: 10pt;
     align-self: center;
 }
