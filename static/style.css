@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito|Open-Sans');
+@import url('https://fonts.googleapis.com/css?family=Nunito Sans');
 
 :root {
     --floating-container-bg-colour: #fcfcfc;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
     text-align: justify;
     background-image: url("../assets/images/background.png");
@@ -131,6 +131,8 @@ nav ul li a {
 
 a {
     color: black;
+    font-weight: bold;
+    transition: opacity ease 0.2s;
 }
 
 a:visited { 
@@ -138,16 +140,8 @@ a:visited {
     color:black;
 }
 
-a:focus {
-    text-decoration: none;
-    color:rgb(0, 0, 0);
-    background: var(--floating-container-bg-colour);
-}
-
 a:hover {
-    text-decoration: none;
-    color: rgb(46, 49, 145);
-    background: var(--floating-container-bg-colour);
+    opacity: 0.8;
 }
 
 .no-bullet {
