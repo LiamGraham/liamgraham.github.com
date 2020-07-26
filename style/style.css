@@ -20,6 +20,14 @@ html {
   scroll-behavior: smooth;
 }
 
+::-moz-selection { 
+  background: var(--dark-grey); 
+  color: white;
+}
+::selection { 
+  background: var(--dark-grey); 
+  color: white;
+}
 
 @media screen and (min-width: 320px) {
   html {
