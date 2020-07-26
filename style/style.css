@@ -59,7 +59,7 @@ main {
 }
 
 .content-wrapper {
-  width: 60%;
+  width: 55%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
