@@ -18,7 +18,7 @@ html, body {
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background: rgb(243, 243, 243t );
+  background: rgb(243, 243, 243);
 }
 
 ::-moz-selection { 
