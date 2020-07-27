@@ -63,18 +63,19 @@ main {
 
 .title-wrapper {
   width: 100%;
-  transition: transform ease 0.8s;
 }
 
-.title-wrapper:hover {
-  transform: translateX(10%);
-}
 
 .title {
   font-family: "Mulish", sans-serif;
   font-weight: bold;
   font-size: 4.5em;
   line-height: 1.02em;
+  transition: transform ease 0.8s;
+}
+
+.title-wrapper:hover>.title {
+  transform: translateX(10%);
 }
 
 .content-wrapper {
